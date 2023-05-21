@@ -5,12 +5,13 @@
             {{ Form::label('categoria') }}
             {{ Form::text('Nombre', $category->Nombre, ['class' => 'form-control' . ($errors->has('Nombre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
             {!! $errors->first('Nombre', '<div class="invalid-feedback">:message</div>') !!}
+
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             {{ Form::label('id_categoria') }}
             {{ Form::text('id', $category->id, ['class' => 'form-control' . ($errors->has('id') ? ' is-invalid' : ''), 'placeholder' => 'id']) }}
             {!! $errors->first('id', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+        </div> -->
 
     </div>
     <div class="box-footer mt20">

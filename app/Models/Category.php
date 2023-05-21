@@ -23,7 +23,7 @@ class Category extends Model
 {
     use HasFactory;
     static $rules = [
-		'Nombre' => 'required',
+		'Nombre' => 'required|unique:categories',
     ];
 
     protected $perPage = 20;
@@ -33,7 +33,7 @@ class Category extends Model
      *
      * @var array
      */
-    protected $fillable = ['Nombre','id_subcategoria'];
+    protected $fillable = ['Nombre'];
 
     public function subcategory()
     {
