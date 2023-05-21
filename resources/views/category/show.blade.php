@@ -1,5 +1,5 @@
-@extends('layouts.app')
 
+@extends('adminlte::page')
 @section('template_title')
     {{ $category->name ?? "{{ __('Show') Category" }}
 @endsection
