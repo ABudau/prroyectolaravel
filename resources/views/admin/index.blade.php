@@ -34,13 +34,16 @@
     {!! $chart->renderChartJsLibrary() !!}
     {!! $chart->renderJs() !!}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-        setInterval(function() {
-            $.get('/chart-data', function(data) {
-                // Actualiza el gráfico con los nuevos datos
-                window.myChart.update(data);
-            });
-        }, 3000); // Actualiza el gráfico cada 3 segundos
+       
+       setInterval(function() {
+        
+    $.get('/chart-data', function(chartData) {
+        console.log(chartData);
+        window['{{ $chart->renderJs() }}'].setChartData(chartData);
+    });
+}, 3000); // Actualiza el gráfico cada 3 segundos
     </script>
-
+       
 @stop

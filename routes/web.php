@@ -8,7 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CookieController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,9 +20,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+
+Route::get('/', [CookieController::class, 'showHome']);
+Route::get('/set-cookie', [CookieController::class, 'setCookie']);
+Route::get('/get-cookie', [CookieController::class, 'getCookie']);
+Route::get('/delete-cookie', [CookieController::class, 'deleteCookie']);
 
 Route::get('/register',[RegisterController::class,'show']);
 Route::post('/register',[RegisterController::class,'register']);

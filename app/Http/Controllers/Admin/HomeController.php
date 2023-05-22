@@ -37,8 +37,15 @@ class HomeController extends Controller
             'aggregate_function' => 'count',
             'aggregate_field' => 'book_id',
         ];
-        $chart = new LaravelChart($chart_options);
-        return response()->json($chart->data);
+        // $chart = new LaravelChart($chart_options);
+        // return response()->json($chart->datasets);
+    //     $chart = new LaravelChart($chart_options);
+    //     $chartData = $chart->get($chartData);
+    
+    //     return response()->json($chartData);
+    $chart = new LaravelChart($chart_options);
+    // return response()->json($chart->getDatasets());
+    return $chart->getDatasets();
     }
 
 

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Aplicacion Login</title>
+<title>@if (trim($__env->yieldContent('template_title'))) @yield('template_title') | @endif {{ config('app.name', 'Laravel') }}</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,7 +12,6 @@
 
 </head>
 <body>
-<!-- @include('layouts.partials.navbar') -->
     <main class="container">
       @yield('content')
     </main>
