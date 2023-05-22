@@ -330,13 +330,25 @@ return [
             'icon' => 'fas fa-fw fa-user',
             
         ],
+
         [
             'text' => 'Libros',
             'url'  => 'books',
             'icon' => 'fas fa-fw fa-book',
             
         ],
-
+        [
+            'text' => 'Roles',
+            'url'  => 'roles',
+            'icon' => 'fas fa-fw fa-user',
+            
+        ],
+        [
+            'text' => 'Asignar Rol',
+            'url'  => 'rol-users',
+            'icon' => 'fas fa-fw fa-user',
+            
+        ],
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',

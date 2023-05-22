@@ -47,7 +47,7 @@ class RolUserController extends Controller
 
         $rolUser = RolUser::create($request->all());
 
-        return redirect()->route('rol-users.index')
+        return redirect()->route('rol-user.index')
             ->with('success', 'RolUser created successfully.');
     }
 
@@ -90,7 +90,7 @@ class RolUserController extends Controller
 
         $rolUser->update($request->all());
 
-        return redirect()->route('rol-users.index')
+        return redirect()->route('rol-user.index')
             ->with('success', 'RolUser updated successfully');
     }
 
@@ -103,7 +103,7 @@ class RolUserController extends Controller
     {
         $rolUser = RolUser::find($id)->delete();
 
-        return redirect()->route('rol-users.index')
+        return redirect()->route('rol-user.index')
             ->with('success', 'RolUser deleted successfully');
     }
 }

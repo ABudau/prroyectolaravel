@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('adminlte::page')
 @section('template_title')
     {{ $bookUser->name ?? "{{ __('Show') Book User" }}
 @endsection
