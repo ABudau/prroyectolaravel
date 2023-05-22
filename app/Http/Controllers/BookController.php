@@ -42,14 +42,6 @@ class BookController extends Controller
         
         return view('book.create', compact('book', 'categories','authors'));
     }
-    
-    // public function exportPdf()
-    // {
-    //     $books = Book::with(['categories.subcategory', 'authors'])->paginate();
-    
-    //     $pdf = Pdf::loadView('book.index',compact('books'));
-    //     return $pdf->download('invoice.pdf');
-    // }
 
     /**
      * Store a newly created resource in storage.

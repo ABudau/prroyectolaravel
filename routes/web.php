@@ -1,8 +1,5 @@
 <?php
 
-use App\Http\Controllers\Admin\HomeController as AdminController;
-use App\Http\Controllers\BookController;
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
