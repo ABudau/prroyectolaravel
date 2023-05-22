@@ -40,9 +40,17 @@ class Category extends Model
         return $this->belongsTo(Category::class, 'id_subcategoria');
     }
 
+    // public function books()
+    // {
+    //     // return $this->belongsToMany(Book::class);
+    //     return $this->belongsToMany(Book::class, 'book_category');
+    // }
+
+    protected $primaryKey = 'id';
+
     public function books()
     {
-        return $this->belongsToMany(Book::class);
+        return $this->belongsToMany(Book::class, 'book_category', 'category_id', 'book_id');
     }
     // /**
     //  * @return \Illuminate\Database\Eloquent\Relations\HasMany

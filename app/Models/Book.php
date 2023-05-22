@@ -50,9 +50,16 @@ class Book extends Model
     // {
     //     return $this->hasMany('App\Models\AuthorBook', 'id_libro', 'id');
     // }
+    // public function categories()
+    // {
+    //     // return $this->belongsToMany(Category::class);
+    //     return $this->belongsToMany(Category::class, 'book_category');
+    // }
+    protected $primaryKey = 'id';
+
     public function categories()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(Category::class, 'book_category', 'book_id', 'category_id');
     }
     public function authors()
     {

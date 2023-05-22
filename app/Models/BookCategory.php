@@ -34,23 +34,33 @@ class BookCategory extends Model
      * @var array
      */
     protected $fillable = ['book_id','category_id'];
+    protected $table = 'book_category';
 
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
     public function book()
     {
-        return $this->hasOne('App\Models\Book', 'id', 'book_id');
+        return $this->belongsTo(Book::class, 'book_id', 'id');
     }
-    
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
+
     public function category()
     {
-        return $this->hasOne('App\Models\Category', 'id', 'category_id');
+        return $this->belongsTo(Category::class, 'category_id', 'id');
     }
+
+    // /**
+    //  * @return \Illuminate\Database\Eloquent\Relations\HasOne
+    //  */
+    // public function book()
+    // {
+    //     return $this->hasOne('App\Models\Book', 'id', 'book_id');
+    // }
+    
+    // /**
+    //  * @return \Illuminate\Database\Eloquent\Relations\HasOne
+    //  */
+    // public function category()
+    // {
+    //     return $this->hasOne('App\Models\Category', 'id', 'category_id');
+    // }
     
 
 }

@@ -17,6 +17,8 @@ Route::resource('authors', AuthorController::class);
 Route::resource('books', BookController::class);
 Route::resource('roles', RoleController::class);
 Route::resource('rol-users', RolUserController::class);
+Route::get('/chart-data', [HomeController::class, 'chartData'])->name('chart.data');
+
 Route::get('/logout', [LogoutController::class,'logout'])->name('logout');
 Route::post('/logout', [LogoutController::class,'logout'])->name('logout');
 
